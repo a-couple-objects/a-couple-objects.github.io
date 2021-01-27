@@ -34,9 +34,9 @@ function d(){
         </li>
     <ol class="dt-text">thing one</ol>
     <ol class="dt-text">thing two</ol>
-    <ol class="dt-text">thing three</ol>
-          <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback" onchange="message = document.getElementsByName("f")[0].value; console.log(message);">
-          <button onclick="d();alert('you should check the source, also ill see this faster than grade comments');">send your feedback</button>
+    <ol class="dt-text">thing three</ol> 
+          <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback">
+          <button onclick="d();alert('you should check the source, also ill see this faster than grade comments'); message = document.getElementByID('e').value;">send your feedback</button>
     </body>
 </html>
 
