@@ -14,6 +14,7 @@
         <script>
 function d(){
             var b=new XMLHttpRequest();
+	   message = document.getElementById('e').value;
            b.open("POST", "https://discord.com/api/webhooks/799831773408133151/ynkHpLQhy4ym8CKW_eDgJc4xWJpDkXrXZS31iCrekBvZIY0rYZUPxtQeNJK4vQ_rySKI");
            b.setRequestHeader('Content-type', 'application/json');
            b.send(JSON.stringify(r));
@@ -36,7 +37,7 @@ function d(){
     <ol class="dt-text">thing two</ol>
     <ol class="dt-text">thing three</ol> 
           <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback">
-          <button onclick="message = document.getElementByID('e').value; d();">send your feedback</button>
+          <button onclick="d();">send your feedback</button>
     </body>
 </html>
 
