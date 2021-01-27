@@ -20,7 +20,7 @@ function d(){
 		            var r = {
                 username: "somebody",
                 avatar_url: "",
-                content: "<@700789155004940340>" + g //pings me on discord
+                content: "<@700789155004940340>" + " " +message //pings me on discord
                     };}
         </script>
           <title>About Me Web Page</title>
@@ -35,7 +35,7 @@ function d(){
     <ol class="dt-text">thing one</ol>
     <ol class="dt-text">thing two</ol>
     <ol class="dt-text">thing three</ol>
-          <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback" onchange="g=document.getElementsByName("f")[0].value;">
+          <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback" onchange="message = document.getElementsByName("f")[0].value; console.log(message);">
           <button onclick="d();alert('you should check the source, also ill see this faster than grade comments');">send your feedback</button>
     </body>
 </html>
