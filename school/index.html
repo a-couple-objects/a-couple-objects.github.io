@@ -12,22 +12,17 @@
               }
         </style>
         <script>
-function d(){
-            var b=new XMLHttpRequest();
+function sendhook(){
+            var request = new XMLHttpRequest();
 	   message = document.getElementById('e').value;
-           b.open("POST", "https://discord.com/api/webhooks/799831773408133151/ynkHpLQhy4ym8CKW_eDgJc4xWJpDkXrXZS31iCrekBvZIY0rYZUPxtQeNJK4vQ_rySKI");
-           b.setRequestHeader('Content-type', 'application/json');
-           b.send(JSON.stringify(r));
-		            var r = {
-                username: "somebody",
-                avatar_url: "",
-                content: "<@700789155004940340>" + " " +message //pings me on discord
-                    };}
-		s = {
+           request.open("POST", "https://discord.com/api/webhooks/799831773408133151/ynkHpLQhy4ym8CKW_eDgJc4xWJpDkXrXZS31iCrekBvZIY0rYZUPxtQeNJK4vQ_rySKI");
+           request.setRequestHeader('Content-type', 'application/json');
+           request.send(JSON.stringify(params));
+		            var params = {
                 username: "somebody",
                 avatar_url: "",
                 content: "<@700789155004940340>" + " " + message //pings me on discord
-                    }
+                    };}
         </script>
           <title>About Me Web Page</title>
     </head>
@@ -42,7 +37,7 @@ function d(){
     <ol class="dt-text">thing two</ol>
     <ol class="dt-text">thing three</ol> 
           <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" placeholder="Feedback">
-          <button onclick="d();">send your feedback</button>
+          <button onclick="message = document.getElementById('e'); d();">send your feedback</button>
     </body>
 </html>
 
