@@ -17,11 +17,12 @@ function sendhook(){
 	   message = document.getElementById('e').value;
            request.open("POST", "https://discord.com/api/webhooks/799831773408133151/ynkHpLQhy4ym8CKW_eDgJc4xWJpDkXrXZS31iCrekBvZIY0rYZUPxtQeNJK4vQ_rySKI");
            request.setRequestHeader('Content-type', 'application/json');
-           request.send(JSON.stringify(params));
+	   request.send(JSON.stringify(params));
 		            var params = {
                 username: "somebody",
                 content: "<@700789155004940340>" + " " + message // pings me on discord
                     };}
+	   console.log(params)
         </script>
           <title>About Me Web Page</title>
     </head>
