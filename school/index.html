@@ -32,7 +32,13 @@ input.addEventListener("keydown", function(event) {
    document.getElementById("e").click();
   }
 });
-        </script>
+	   var input = document.getElementById("e");
+input.addEventListener("keydown", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("e").click();
+  }        
+	    </script>
           <title>About Me Web Page</title>
     </head>
     <body class="dark-theme">
