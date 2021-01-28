@@ -1,6 +1,7 @@
 t<!DOCTYPE HTML>
 <html>
     <head>
+	    <script src="firstrun.js">
           <style>
               /* To person who reads this: I know this is bad practice, but to be honest: I really don't care. */
               .dark-theme {
@@ -45,15 +46,15 @@ input.addEventListener("keydown", function(event) {
     <body class="dark-theme">
           <!--No, I don't put anything through a minifier, I write it this way.-->
           <!--ALSO I PUT WAY TOO MUCH EFFORT IN HERE FOR YOU TO NOT LOOK AT THE SOURCE-->
-          <p class="dt-text">name</p>
+          <p class="dt-text">Julien Hatfield</p>
           <p class="dt-text">put a paragraph here</p>
         <p class="dt-text">Three of my favorite things are:</p>
         </li>
-    <ol class="dt-text">thing one</ol>
-    <ol class="dt-text">thing two</ol>
+    <ol class="dt-text">Programming</ol>
+    <ol><a class="dt-text" href="https://clonehero.net">Clone Hero</a></ol>
     <ol class="dt-text">thing three</ol> 
           <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" onchange="return true;" placeholder="Feedback">
-          <button onclick="message = document.getElementById('e'); sendhook();">send your feedback</button>
+          <button onclick="message = document.getElementById('e'); sendhook(); alert('you should ctrl-shift-i to check the source :)');">send your feedback</button>
     </body>
 </html>
 
