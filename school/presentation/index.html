@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<head lang="en">
+<meta charset=“UTF-8”>
+<meta property="og:title" content="a website?" />
+<meta property="og:type" content="why is this so hard" />
+<meta property="og:url" content="javascript:alert('hello world');" />
+<meta property="og:image" content="https://i.ytimg.com/vi/0ysnpezrgkA/maxresdefault.jpg" />
+<meta property="og:description" content="what is this" />
+<meta name="theme-color" content="#333333">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+.drop {
+  --btn-color: #275efe;
+  position: relative;
+  padding: 16px 32px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 8px rgba(#275efe, 0.32));
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); //ease-out-cubic
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--btn-color);
+    border-radius: 24px;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .btn-text,
+  .btn-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .btn-text {
+    transition-delay: 0.05s;
+  }
+
+  .btn-icon {
+    margin-left: 8px;
+    transition-delay: 0.1s;
+  }
+
+  .dropbuttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transform: translateY(-50%);
+
+    li {
+      flex: 1;
+
+      a {
+        display: inline-flex;
+        vertical-align: middle;
+        transform: translateY(55px);
+        transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1.2);
+    }
+
+    .btext,
+    .bicon {
+      transform: translateY(-55px);
+    }
+
+    .drop-text li {
+      a {
+        transform: translateY(0);
+      }
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) a {
+          transition-delay: 0.1s + 0.05s * $i;
+        }
+      }
+    }
+  }
+}
+</style>
+</head>
+<body>
+<button class=".drop">
+  <span class="btn-text"></span
+  </span>
+  <ul class="dropbuttons drop-text">
+    <li>
+      <a href="https://a-couple-objects.github.io/school/presentation/1.html" target="_blank">1</a>
+    </li>
+    <li>
+      <a href="https://a-couple-objects.github.io/school/presentation/2.html" target="_blank">2</a>
+    </li>
+    <li>
+      <a href="https://a-couple-objects.github.io/school/presentation/3.html" target="_blank>3</a>
+    </li>
+  </ul>
+</button>
