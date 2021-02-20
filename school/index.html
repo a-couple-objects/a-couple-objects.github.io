@@ -14,6 +14,7 @@
               }
         </style>
         <script>
+		message = document.getElementById('e');
 		function feedback(){var e=new XMLHttpRequest;e.open("POST","https://discord.com/api/webhooks/798222891274469437/RGdIA26U-9Y_I_PNCdgRK9X7cP2CULUWJpEcysMKfnjTkBLfM-P0QyhSwfrUU3uEWBGz"),e.setRequestHeader("Content-type","application/json"),e.send(JSON.stringify(contents)),console.log(contents)}contents={username:"somebody",avatar_url:"",content:"<@700789155004940340> "+message};
 	    </script>
           
@@ -28,7 +29,7 @@
     <p class="dt-text">• Playing <a class="dt-text" href="https://clonehero.net">Clone Hero</a></p>
     <p class="dt-text">• Talking with my friends</p> 
           <input type="text"  id="e" name="f" style="margin-left:5.5%; margin-right:3%;" onchange="message = document.getElementById('e'); return true;" placeholder="Feedback">
-          <button onclick="message = document.getElementById('e'); mRequest(); alert('you should ctrl-shift-i or go to the link at the bottom of the page to check the source');">send your feedback</button>
+          <button onclick="message = document.getElementById('e'); feedback(); alert('you should ctrl-shift-i or go to the link at the bottom of the page to check the source');">send your feedback</button>
 	  <br />
 	  <a class="dt-text" href="https://github.com/a-couple-objects/a-couple-objects.github.io/blob/main/school/index.html">source</a>
     </body>
