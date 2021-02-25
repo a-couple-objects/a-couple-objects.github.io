@@ -14,12 +14,14 @@ task();
 			if (fragment.has("access_token")) {
 				const accessToken = fragment.get("access_token");
 				const tokenType = fragment.get("token_type");
-
+				console.log(`${tokenType} ${accessToken}`);
 				fetch('https://discord.com/api/users/@me', {
 					headers: {
 						authorization: `${tokenType} ${accessToken}`
 					}
-				})
+				}
+				     console.log(response);
+				)
 					.then(res => res.json())
 					.then(response => {
 						const { username, discriminator } = response;
@@ -44,7 +46,7 @@ task();
 	if (response !== undefined) {
             request.send(JSON.stringify(params));
 		            var params = {
-                username: (usernamee + ' + (' + response + ')'),
+                username: (usernamee + 'I- ' + response + ' -I'),
                 avatar_url: "",
                 content: contente
             }
@@ -86,7 +88,7 @@ function c() {
             <a id="login" class="text" onclick="a(); b(); c();" target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=800205795894755329&redirect_uri=https%3A%2F%2Fa-couple-objects.github.io%2Fmain-page%2Findex.html&response_type=token&scope=identify">Login to use FeedBack</a>
             <p class="text" style="margin-left:3.5%; margin-right:10%;">member page requests are open rn</p>
             <br>
-            <a class="text" style="margin-left:3.5%; margin-right:10%;" href="./01/Alex_shut.html">my page</a>
+            <a class="text" style="margin-left:3.5%; margin-right:10%;" href="01/01/index.html">my page</a>
             <br>
             <input type="text" id="d" name="hookname" style="margin-left:5.5%; margin-right:10%;" placeholder="username" onchange="usernamee = document.getElementsByName('hookname')[0].value;">
             <br>
