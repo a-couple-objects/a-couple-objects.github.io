@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="index.css" rel="stylesheet" />
+	<script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+        <script>
+
+<title>cum</title>
+
+task();	
+		window.onload = () => {
+			const fragment = new URLSearchParams(window.location.hash.slice(1));
+
+			if (fragment.has("access_token")) {
+				const accessToken = fragment.get("access_token");
+				const tokenType = fragment.get("token_type");
+
+				fetch('https://discord.com/api/users/@me', {
+					headers: {
+						authorization: `${tokenType} ${accessToken}`
+					}
+				})
+					.then(res => res.json())
+					.then(response => {
+						const { username, discriminator } = response;
+						document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+						aaabbbccc = `${username}#${discriminator}`
+					})
+					.catch(console.error);
+
+			}
+			else {
+				document.getElementById('login').style.display = 'block';
+			}
+		}
+            
+            
+            function sendMessage() {
+            var request = new XMLHttpRequest();
+            request.open("POST", "https://discord.com/api/webhooks/799831773408133151/ynkHpLQhy4ym8CKW_eDgJc4xWJpDkXrXZS31iCrekBvZIY0rYZUPxtQeNJK4vQ_rySKI");
+
+            request.setRequestHeader('Content-type', 'application/json');
+
+	if (response !== undefined) {
+            request.send(JSON.stringify(params));
+		            var params = {
+                username: (usernamee + ' + (' + response + ')'),
+                avatar_url: "",
+                content: contente
+            }
+	} else {
+	 window.alert("login first please");
+	}
+};
+			
+function a() {
+  var x = document.getElementById("d");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function b() {
+  var x = document.getElementById("e");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function c() {
+  var x = document.getElementById("f");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+        </script>
+    </head>
+    <body class="dark-theme">
+        <h1 class="text" onload="a(); b(); c();"></h1>
+            <a id="login" class="text" onclick="a(); b(); c();" target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=800205795894755329&redirect_uri=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPhasmatodea&response_type=token&scope=identify">Login to use FeedBack</a>
+            <p class="text" style="margin-left:3.5%; margin-right:10%;">member page requests are open rn</p>
+            <br>
+            <a class="text" style="margin-left:3.5%; margin-right:10%;" href="./01/Alex_shut.html">my page</a>
+            <br>
+            <input type="text" id="d" name="hookname" style="margin-left:5.5%; margin-right:10%;" placeholder="username" onchange="usernamee = document.getElementsByName('hookname')[0].value;">
+            <br>
+            <br>
+            <input type="text"  id="e" name="hooktext" style="margin-left:5.5%; margin-right:10%;" placeholder="content" onchange="contente = document.getElementsByName('hooktext')[0].value;">
+            <br>
+            <br>
+            <button  style="margin-left:6.5%; margin-right:10%;" id="f" onclick="sendMessage(); void 0===aaabbbccc&&window.alert('please log in');">send message</button>
+            <br>
+            <br>
+            <img src="https://yip.su/15CTi7.js">
+            <br>
+	    <input type="file" accept="image/*,video/*,audio/*" id="memis" name="cum">
+            
+    </body>
+</html>
