@@ -5,7 +5,13 @@
 	    	
     <script src="https://cdn.discordapp.com/attachments/705996856894947370/814560823417897050/ridiculous_expansion.js"></script>
 	    <title>About Me Web Page</title>
-	    <script src="firstrun.js"></script>
+	    <script>  
+element = document.getElementById('k');
+if (localStorage.getItem("seen-before") != "yes") {
+  localStorage.setItem("seen-before", "yes");
+  alert('Welcome to the website! Remember to check the source and leave feedback with the input before you leave.');
+  element.style.display = 'block';
+  };</script>
           <style>
               /* To person who reads this: I know this is bad practice, but to be honest I really don't care. */
               .dark-theme {
