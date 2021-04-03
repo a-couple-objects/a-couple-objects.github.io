@@ -9,4 +9,9 @@ function censor(input) {
     g = f.replace(/drugs/g, "dr-gs");'
     h = g.replace(/drunk/g, "dr-nk");
     i = h.replace(/blood/g, "cherry kool-aid");
-    j = i.replace(/_/g, "-");
+    j = i.replace(/hate/g, "h-te");'
+    k = j.replace(/school/g, "brain house");
+    function copy() {
+      copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
+    };
+};
