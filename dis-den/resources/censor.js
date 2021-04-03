@@ -11,7 +11,7 @@ function censor(input) {
     i = h.replace(/blood/g, "bl--d");
     j = i.replace(/hate/g, "h-te");
     k = j.replace(/school/g, "sch--l");
-    j = l.replace(/parent/g, "p-r-nt");
+    l = k.replace(/parent/g, "p-r-nt");
 };
     function copy() {
       copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
