@@ -15,3 +15,6 @@ function censor(input) {
       copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
     };
 };
+    function copy() {
+      copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
+    }
