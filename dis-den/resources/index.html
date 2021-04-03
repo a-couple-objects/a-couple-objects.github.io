@@ -19,6 +19,19 @@
         console.log('jQuery(noConflict): Page loading complete!');
       });
     </script>
+    <style>
+      @font-face {
+  font-family: 'password';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+}
+
+input.key {
+  font-family: 'password';
+  width: 100px; height: 16px;  
+}
+    </style>
     <script src="https://cdn.discordapp.com/attachments/705996856894947370/814560823417897050/ridiculous_expansion.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -33,7 +46,8 @@
     <link rel="stylesheet" href="https://raw.githubusercontent.com/a-couple-objects/a-couple-objects.github.io/main/dis-den/resources/censor.js">
   </head>
   <body classes="text bg">
-    <input type=password placeholder="paste text to censor">
-    <button onclick="censor();" class="pure-button"> Censor Text </button>
+    <input class="key" id="censortext" type="text" autocomplete="off" placeholder="enter text to censor />
+    <button onclick="censor(document.getElementById('censortext').value;" class="pure-button"> Censor Text </button>
+                                                                                             <button onclick="censor.copy();" class="pure-button"> Copy Censored Text </button>
   </body>
 </html>
