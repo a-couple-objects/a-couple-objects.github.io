@@ -14,5 +14,5 @@ function censor(input) {
     l = k.replace(/parent/g, "p-r-nt");
 };
     function copy() {
-      copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
+      document.getElementById('censortext').value=l;copyText=document.getElementById("censortext");copyText.select();copyText.setSelectionRange(0,99999);document.execCommand("copy");
     }
