@@ -1,25 +1,42 @@
 <html>
   <head>
     <style>
-      square {width: 50px;
-        height: 50px;
-        color:green;
-        position: relative;
-        }
+#space {
+  width: 600px;
+  height: 600px;
+  background-color: #eee
+}
+#square {
+
+ width: 50px;
+ height:50px;
+ position: relative;
+ background-color: #22FF22
+}
     </style>
   </head>
   <body>
-    <div id=square>
-    </div>
+    <div id="space">
+  <div onclick="hit()" id="square">
+
+   </div>
+
+</div>
     <script>
-      var top=Math.random();
-        top=top*300;
-        top+=300
-      var left=Math.random();
-        left=left*300;
-        left+=300
-      document.getElementById("square").style.top=top+"px";                   
-      document.getElementById("square").style.left=left+"px";     
+      t = 0
+const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
+
+const square= document.querySelector('#square');
+      function hit() {
+   square.style.left= getRandom(25, 575)+'px'; 
+   square.style.top = getRandom(25, 575)+'px';
+   t = 0
+      }
+      function timer () {
+        t+=.1
+        document.title=t
+      }
+      setInterval(timer(), 100)
     </script>
   </body>
 </html>
