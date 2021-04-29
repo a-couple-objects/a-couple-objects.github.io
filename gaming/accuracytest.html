@@ -2,8 +2,8 @@
   <head>
     <style>
 #space {
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   background-color: #eee
 }
 #square {
@@ -18,7 +18,7 @@
   <body>
     <div id="space">
   <div onclick="hit()" id="square">
-
+    <p id=time>0</p>
    </div>
 
 </div>
@@ -28,13 +28,13 @@ const getRandom = (min, max) => Math.floor(Math.random()*(max-min+1)+min);
 
 const square= document.querySelector('#square');
       function hit() {
-   square.style.left= getRandom(25, 575)+'px'; 
-   square.style.top = getRandom(25, 575)+'px';
+   square.style.left= getRandom(50, 500)+'px'; 
+   square.style.top = getRandom(50, 500)+'px';
    t = 0
       }
       function timer () {
         t+=.1
-        document.title=t
+        document.getElementById('time').innerHTML="t"
       }
       setInterval(timer(), 100)
     </script>
